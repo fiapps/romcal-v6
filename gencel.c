@@ -38,8 +38,6 @@ char *gencel(season_t season,
  *
  *----------------------------------------------------------------------*/
 
-   char *malloc();
-
    static char *seatab[] =
    {
       "Ordinary Time",
