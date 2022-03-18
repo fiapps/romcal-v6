@@ -2,6 +2,7 @@
 calhead?.h
 caltail?.h
 monhead?.h
+fixed.h
 
 # Compiled binaries
 mkhead
