@@ -136,14 +136,14 @@ int   first;
 /*
  * Boxes on the top row
  */
-   if (days = first - (on_top ? TUE : SUN)) {
+   if ((days = first - (on_top ? TUE : SUN))) {
       day1 = 1 - days;
       printf("%d %d %d Fill\n", days, day1, first);
    }
 /*
  * Boxes on the bottom row
  */
-   if (days = (on_top ? SAT : THU) - last) {
+   if ((days = (on_top ? SAT : THU) - last)) {
       day1 = MONLEN(year, mon) + 1;
       printf("%d %d %d Fill\n", days, day1, first);
    }
