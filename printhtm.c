@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <string.h>
 #include "romcal.h"
 #include "montab.h"

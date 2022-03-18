@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #ifndef SEEK_CUR
 #include <unistd.h>
 #endif

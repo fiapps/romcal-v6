@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #ifndef MAINPROG
 #include "romcal.h"
 #endif
