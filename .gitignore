@@ -3,6 +3,12 @@ calhead?.h
 caltail?.h
 monhead?.h
 
+# Compiled binaries
+mkhead
+mkfix
+eastdate
+romcal
+
 # Prerequisites
 *.d
 
