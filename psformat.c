@@ -152,7 +152,7 @@ int   first;
 /*
  * Print the end of page lines.
  */
-end_page()
+void end_page()
 {
    printf("restore\n");
    printf("showpage\n");

@@ -75,7 +75,7 @@
 /* psformat.c      */   extern void do_fills(month_t,
 /* psformat.c      */                        int,
 /* psformat.c      */                        int);
-/* psformat.c      */   extern int end_page(void);
+/* psformat.c      */   extern void end_page(void);
 /* psformat.c      */   extern void do_page1(month_t,
 /* psformat.c      */                        int,
 /* psformat.c      */                        int);
