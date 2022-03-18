@@ -78,7 +78,7 @@ NULL
  */
    if (lastweek) {
       for (cp = lastrow; *cp != NULL; cp++) {
-         printf(*cp);
+         printf("%s", *cp);
       }
    }
    printf("\n");
