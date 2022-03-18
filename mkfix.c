@@ -6,7 +6,7 @@
 #include <time.h>
 #include "romcal.h"
 
-void  main(argc, argv)
+int  main(argc, argv)
 int   argc;
 char *argv[];
 {
@@ -189,5 +189,5 @@ char *argv[];
    fclose(fpi);
    fclose(fpo);
 
-   exit(0);
+   return 0;
 }

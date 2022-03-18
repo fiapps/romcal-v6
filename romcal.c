@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "romcal.h"
 
-void  main(int argc, 
+int  main(int argc, 
 	   char *argv[])
 {
 /*----------------------------------------------------------------------*
@@ -104,5 +104,5 @@ void  main(int argc,
  */
    printcal(info, cal);
 
-   exit(0);
+   return 0;
 }

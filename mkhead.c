@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-main(int   argc,
-     char *argv[])
+int main(int   argc,
+         char *argv[])
 {
 /*----------------------------------------------------------------------*
  *
@@ -69,4 +69,6 @@ main(int   argc,
       printf("\\n\",\n");
    }
    printf("NULL\n};\n");
+
+   return 0;
 }
