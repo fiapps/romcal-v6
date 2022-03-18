@@ -161,6 +161,7 @@
 /* printweb.c      */                        struct Cal[],
 /* printweb.c      */                        int);
 /* leapyear.c      */   extern logical_t leapyear(int);
+/* version.c       */   extern void version();
 #endif
 
 #endif
