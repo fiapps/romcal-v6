@@ -1,3 +1,5 @@
+#include "romcal.h"
+
 int   doy(int year, 
 	  int month, 
 	  int day)

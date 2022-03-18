@@ -1,3 +1,5 @@
+#include "romcal.h"
+
 void doydate(int year,
 	     int doy,
 	     int *month,

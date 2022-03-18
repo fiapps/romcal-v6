@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "caltypes.h"
 #include "montab.h"
+#include "romcal.h"
 
 /*----------------------------------------------------------------------*
  *

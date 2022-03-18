@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "romcal.h"
 
 char *datestr(int doy, 
 	      int year)
