@@ -120,6 +120,10 @@
 /* doy.c           */   extern int doy(int,
 /* doy.c           */                  int,
 /* doy.c           */                  int);
+/* doydate.c       */   extern void doydate(int,
+/* doydate.c       */                       int,
+/* doydate.c       */                       int *,
+/* doydate.c       */                       int *);
 /* xmas2.c         */   extern void christmas2(struct Info *,
 /* xmas2.c         */                          struct Cal[]);
 /* xmas1.c         */   extern int christmas1(struct Info *,
