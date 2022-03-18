@@ -112,7 +112,7 @@ void printics(struct Info *info,
  *          current time, the computer ID, and the day of the year
  *          of the celebration.
  */
-	    printf("UID:%s-%08x-%03d\r\n",
+	    printf("UID:%s-%08lx-%03d\r\n",
 		    datetime,
 		    gethostid(),
 		    idoy);
