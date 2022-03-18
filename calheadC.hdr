@@ -1,0 +1,282 @@
+%!PS-Adobe-1.0
+%%----------------------------------------------------------------------
+%%
+%%	@(#)ROMCAL calheadC.hdr 6.1 02/12/06 17:23:55
+%%
+%%	Copyright (C) 1993,1995 Kenneth G. Bath
+%%	Permission to use and modify this software and its
+%%	documentation for any purpose other than its incorporation
+%%	into a commercial product is hereby granted without fee.
+%%
+%%	Permission to copy and distribute this software and its
+%%	documentation only for non-commercial use is also granted
+%%	without fee, provided, however, that the above copyright
+%%	notice appear in all copies, that both that copyright
+%%	notice and this permission notice appear in supporting
+%%	documentation. The author makes no representations about
+%%	the suitability of this software for any purpose. It is
+%%	provided "as is" without express or implied warranty.
+%%
+%%----------------------------------------------------------------------
+%%
+%%	Selected parts of the PostScript option of this software
+%%	are taken or derived from "pscal - a PostScript calendar
+%%	generator" written by Christopher Phillips.  The pscal
+%%	copyright notice follows:
+%%
+%% 	"Copyright (C) 1992, Christopher Phillips"
+%% 	"Permission to use and modify this software and its
+%% 	documentation for any purpose other than its incorporation
+%% 	into a commercial product is hereby granted without fee.
+%% 	Permission to copy and distribute this software and its
+%% 	documentation only for non-commercial use is also granted
+%% 	without fee, provided, however, that the above copyright
+%% 	notice appear in all copies, that both that copyright
+%% 	notice and this permission notice appear in supporting
+%% 	documentation. The author makes no representations about
+%% 	the suitability of this software for any purpose. It is
+%% 	provided "as is" without express or implied warranty."
+%%
+%%----------------------------------------------------------------------
+/inch { 72 mul } bind def
+/PageHeight 8.5 inch def
+/PageWidth 11 inch def
+/BottomMargin 3 8 div inch def
+/TopMargin 1 inch def
+/LeftMargin .5 inch def
+/HeadingHeight .25 inch def
+/TitleBaseline 1 4 div inch def
+/NumberBaseline 3 16 div inch def
+/SmallNumberBaseline TitleBaseline 3 32 div inch add def
+/NumberRightMargin 1 16 div inch def
+/SmallNumberMargin 1 32 div inch def
+/SmallNumberSpacing 1 32 div inch def
+/HolidayBaseline 1 16 div inch def
+/SmallTitleBaseline 3 16 div inch def
+/TitleSize 24 def
+/NumberSize 14 def
+/HolidaySize 9 def
+/SmallTitleSize 10 def
+/HeadingSize 14 def
+/SmallNumberSize 8 def
+/TitleFont /Times-Bold def
+/NumberFont /Times-Roman def
+/HolidayFont /Times-Roman def
+/SmallTitleFont /Courier def
+/HeadingFont /Times-Roman def
+/SmallNumberFont /Courier def
+/RightMargin PageWidth LeftMargin sub def
+/TopLine PageHeight TopMargin sub def
+/Xlength RightMargin LeftMargin sub def
+/BoxWidth Xlength 7 div def
+/Ylength PageHeight TopMargin sub BottomMargin sub def
+/DayNames [(Sunday) (Monday) (Tuesday) (Wednesday)
+	(Thursday) (Friday) (Saturday)] def
+/NextHolidayPosition 31 array def
+/str 3 string def
+/WeekSizes {	% weeks
+	/weeks exch def
+	/BoxHeight Ylength HeadingHeight sub weeks div def
+} bind def
+/SetFont {	% size name
+	findfont exch scalefont setfont
+} bind def
+/SetTitleFont { TitleSize TitleFont SetFont } bind def
+/SetNumberFont { NumberSize NumberFont SetFont } bind def
+/SetHolidayFont { HolidaySize HolidayFont SetFont } bind def
+/SetSmallTitleFont { SmallTitleSize SmallTitleFont SetFont } bind def
+
+/SetHeadingFont { HeadingSize HeadingFont SetFont } bind def
+/SetSmallNumberFont { SmallNumberSize SmallNumberFont SetFont } bind def
+
+/Red { 255 0 0 } def
+/Green { 0 255 0 } def
+/Purple { 155 48 255 } def
+/Rose { 255 192 203 } def
+/White { 245 245 245 } def
+/Black { 100 100 100 } def
+
+/Landscape { 90 rotate 0 PageHeight neg translate} bind def
+/Center {	% (text) y x width
+	2 div add exch moveto
+	dup stringwidth pop 2 div neg 0 rmoveto
+	show
+} bind def
+/RightJustify {	% (text)
+	dup stringwidth pop neg 0 rmoveto
+	show
+} bind def
+/Title {	% (text)
+	TopLine TitleBaseline add
+	LeftMargin dup RightMargin exch sub Center
+} bind def
+/Border {
+	Ylength Xlength LeftMargin BottomMargin
+	newpath
+	moveto
+	dup 3 1 roll 0 rlineto
+	0 exch rlineto
+	neg 0 rlineto
+	closepath
+	stroke
+} bind def
+/HorizontalLines {
+	newpath
+	LeftMargin BottomMargin BoxHeight add moveto
+	weeks {
+		Xlength 0 rlineto
+		Xlength neg BoxHeight rmoveto
+	} repeat
+	stroke
+} bind def
+/VerticalLines {
+	newpath
+	LeftMargin BoxWidth add BottomMargin moveto
+	6 {
+		0 Ylength rlineto
+		BoxWidth Ylength neg rmoveto
+	} repeat
+	stroke
+} bind def
+/Headings {
+	/x LeftMargin def
+	/y TopLine HeadingHeight HeadingSize .7 mul add
+	  2 div sub def
+	DayNames {
+		y x BoxWidth Center
+		/x x BoxWidth add def
+	} forall
+} bind def
+/InitialHoliday {
+	0 1 30 {
+		NextHolidayPosition exch HolidayBaseline put
+	} for
+} bind def
+/Holiday {	% [(text3) (text2) (text1)] first day
+	dup 1 sub /day exch def
+	exch day2xybl
+	/originaly exch def
+	/y originaly NextHolidayPosition day get add def
+	/x exch def
+	{
+		y x BoxWidth Center
+		/y y HolidaySize add def
+	} forall
+	NextHolidayPosition day y originaly sub HolidaySize 2 sub add put
+} bind def
+/day2xytl {	% day first
+	add 1 sub dup 7 mod BoxWidth mul LeftMargin add
+	exch 7 idiv weeks exch sub BoxHeight mul BottomMargin add
+} bind def
+/day2xybl {	% day first
+	day2xytl
+	BoxHeight sub
+} bind def
+/color {	% red green blue -- scale from 0 to 255
+	/blue exch 255 div def
+	/green exch 255 div def
+	/red exch 255 div def
+	red green blue setrgbcolor
+} bind def
+/gray {	% red green blue -- scale from 0 to 255
+	.11 mul
+	exch .59 mul add
+	exch .3 mul add
+	255 div
+	setgray
+} bind def
+/Numbers {	% maxday begin first x y dx dy maxx
+	/maxx exch def
+	/dy exch def
+	/dx exch def
+	/y exch def
+	/x exch def
+	/minx x def
+	dx mul x add /x exch def
+	1 3 -1 roll {
+		str cvs
+		x y moveto
+		gsave
+			% uncomment the following for colored numbers
+			% 255 192 203 color
+			RightJustify
+		grestore
+		/x x dx add def
+		x maxx gt {
+			/x minx def
+			/y y dy sub def
+		} if
+	} for
+} bind def
+/SmallNumbers {	% maxday begin first x y
+	/y exch def
+	/x exch def
+	/two_chars (23) stringwidth pop def
+	/spacing BoxWidth SmallNumberMargin 2 mul sub
+	two_chars 7 mul sub 6 div def
+	x SmallNumberMargin add two_chars add
+	y SmallNumberBaseline sub
+	two_chars spacing add
+	SmallNumberSize SmallNumberSpacing add
+	x BoxWidth add
+	Numbers
+} bind def
+/SmallMonth {	% maxday begin first (text) x y 
+	/y exch def
+	/x exch def
+	SetSmallTitleFont
+	x y SmallTitle
+	SetSmallNumberFont
+	gsave
+		x y SmallNumbers
+	grestore
+} bind def
+/SmallTitle {	% (text) x y
+	SmallTitleBaseline sub
+	exch BoxWidth Center
+} bind def
+/Fill {	% shade days day1 first
+	% shade is from 0 to 1 with 0 being black
+	gsave
+		day2xytl
+		newpath
+		moveto
+		/days exch def
+		BoxWidth days mul 0 rlineto
+		0 BoxHeight neg rlineto
+		BoxWidth days mul neg 0 rlineto
+		closepath
+		.7 setgray
+		fill
+	grestore
+} bind def
+/GrayFill {	% red green blue day1 first
+	% rgb values are from 0 to 1 with 1 being full intensity
+	gsave
+		day2xytl
+		newpath
+		moveto
+		BoxWidth 0 rlineto
+		0 BoxHeight neg rlineto
+		BoxWidth neg 0 rlineto
+		closepath
+		gray
+		fill
+	grestore
+} bind def
+/ColorFill {	% red green blue day1 first
+	% rgb values are from 0 to 1 with 1 being full intensity
+	gsave
+		day2xytl
+		newpath
+		moveto
+		.75 BoxWidth mul 0 rmoveto
+		.25 BoxWidth mul 0 rlineto
+		0 .25 BoxHeight mul neg rlineto
+		.25 BoxWidth mul neg 0 rlineto
+		closepath
+		color
+		fill
+	grestore
+} bind def
+%%EndProlog

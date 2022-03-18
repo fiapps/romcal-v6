@@ -1,0 +1,77 @@
+#!/bin/sh
+set -x
+cc   -c  printweb.c
+cc   -c  printtxt.c
+cc   -c  printrtf.c
+cc   -c  printpsg.c
+cc   -c  printpsc.c
+cc   -c  printmon.c
+cc   -c  printics.c
+cc   -c  printhtm.c
+cc   -c  printcal.c
+cc   -c  version.c
+cc   -c  doydate.c
+cc   -c  rtfrow.c
+cc   -c  montail.c
+cc   -c  splitstr.c
+cc   -c  psformat.c
+cc   -c  mkhead.c
+cc  -o mkhead mkhead.o
+cat monheadR.hdr | ./mkhead | \
+   sed 's/__MKHEAD__/monheadR/' | \
+   sed 's/__YEAR__/%d/' | \
+   sed 's/__MONTH__/%s/' > monheadR.h
+cat monheadH.hdr | ./mkhead | \
+   sed 's/__MKHEAD__/monheadH/' | \
+   sed 's/__YEAR__/%d/' | \
+   sed 's/__MONTH__/%s/' > monheadH.h
+cc   -c  monhead.c
+cc   -c  init.c
+cc   -c  lent.c
+cc   -c  center.c
+cc   -c  ord2.c
+cc   -c  ord1.c
+cc   -c  easter.c
+cc   -c  leapyear.c
+cc   -c  eastdate.c
+cat calheadR.hdr | ./mkhead | \
+   sed 's/__MKHEAD__/calheadR/' | \
+   sed 's/__YEAR__/%d/' | \
+   sed 's/__MONTH__/%s/' > calheadR.h
+cat calheadH.hdr | ./mkhead | \
+   sed 's/__MKHEAD__/calheadH/' | \
+   sed 's/__YEAR__/%d/' | \
+   sed 's/__MONTH__/%s/' > calheadH.h
+cat calheadG.hdr | ./mkhead | \
+   sed 's/__MKHEAD__/calheadG/' | \
+   sed 's/__YEAR__/%d/' | \
+   sed 's/__MONTH__/%s/' > calheadG.h
+cat calheadC.hdr | ./mkhead | \
+   sed 's/__MKHEAD__/calheadC/' | \
+   sed 's/__YEAR__/%d/' | \
+   sed 's/__MONTH__/%s/' > calheadC.h
+cc   -c  calhead.c
+cc   -c  datestr.c
+cc   -c  gencel.c
+cc   -c  advent.c
+cat caltailR.hdr | ./mkhead | \
+   sed 's/__MKHEAD__/caltailR/' | \
+   sed 's/__YEAR__/%d/' | \
+   sed 's/__MONTH__/%s/' > caltailR.h
+cat caltailH.hdr | ./mkhead | \
+   sed 's/__MKHEAD__/caltailH/' | \
+   sed 's/__YEAR__/%d/' | \
+   sed 's/__MONTH__/%s/' > caltailH.h
+cc   -c  caltail.c
+cc   -c  doy.c
+cc   -c  xmas2.c
+cc   -c  xmas1.c
+cc   -c  parse.c
+cc   -c  mkfix.c
+cc  -o mkfix mkfix.o
+./mkfix
+cc   -c  proper.c
+cc   -c  romcal.c
+cc  -o romcal printweb.o printtxt.o printrtf.o printpsg.o printpsc.o printmon.o printics.o printhtm.o printcal.o version.o doydate.o rtfrow.o montail.o splitstr.o psformat.o monhead.o init.o lent.o center.o ord2.o ord1.o easter.o leapyear.o eastdate.o calhead.o datestr.o gencel.o advent.o caltail.o doy.o xmas2.o xmas1.o parse.o proper.o romcal.o 
+cc -DMAINPROG eastdate.c -o eastdate
+exit 0

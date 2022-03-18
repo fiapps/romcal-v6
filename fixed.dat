@@ -1,0 +1,244 @@
+#-----------------------------------------------------------------------
+#
+#	@(#)ROMCAL fixed.dat 6.1 02/12/06 17:23:56
+#
+#	Copyright (C) 1993,1995 Kenneth G. Bath
+#	Permission to use and modify this software and its
+#	documentation for any purpose other than its incorporation
+#	into a commercial product is hereby granted without fee.
+#
+#	Permission to copy and distribute this software and its
+#	documentation only for non-commercial use is also granted
+#	without fee, provided, however, that the above copyright
+#	notice appear in all copies, that both that copyright
+#	notice and this permission notice appear in supporting
+#	documentation. The author makes no representations about
+#	the suitability of this software for any purpose. It is
+#	provided "as is" without express or implied warranty.
+#
+#-------------------- Software Unit Description ------------------------
+#
+#	This file is the input to the 'mkfix' program included with
+#	the ROMCAL package.  This file contains the dates, ranks,
+#	and colors of the fixed date celebrations of the General
+#	Roman Calendar.  The fields of this file are separated by
+#	one or more spaces.  The first field is the name of the month.
+#	The second field is the day of the month.  The third
+#	field is the rank (O: Optional Memorial, M: Memorial,
+#	F: Feast, L: Feast of the Lord, S: Solemnity).  The fourth
+#	field is proper color of the celebration (W: white, R: red,
+#	P: purple, G: green, -: Use color of season).  Anything after
+#	the fourth field up to the newline is the celebration.
+#
+#	To add celbrations to the 'romcal' program, edit this file
+#	and provide the necessary info.  Then type "make".  Be careful
+#	that the name of the month is spelled correctly.
+#
+#	Comments have a '#' in Column 1; blank lines are ignored.
+#
+#---------------------- Software Unit History --------------------------
+#
+#	16Mar93 : created, kgb
+#	19Dec93 : updated for 1994, kgb
+#	05Feb95 : changed first field from month number to name of
+#		  month, kgb
+#	17Feb95 : updated for 1995, kgb
+#	05Mar95 : minor corrections, kgb
+#	11Feb98 : raised the rank of the Dedication of St. John Latern
+#		  (Nov. 9) and All Souls (Nov. 2) to "Feast of the 
+#		  Lord", so that when it falls on Sunday, it will take 
+#		  presidence, kgb
+#
+#-----------------------------------------------------------------------
+
+JANUARY  1 S W Solemnity of Mary, Mother of God
+JANUARY  2 M W Basil the Great and Gregory Nazianzen, Bb & Dd
+JANUARY  4 M W Elizabeth Ann Seton
+JANUARY  5 M W John Neumann, B
+JANUARY  6 O - Bl. Andre Bessette, Rel
+JANUARY  7 O - Raymond of Penyafort, P
+JANUARY 13 O - Hilary, B & D
+JANUARY 17 M W Anthony, Ab
+JANUARY 20 O - Fabian, Po & M; Sebastian, M
+JANUARY 21 M R Agnes, V & M
+JANUARY 22 O - Vincent, De & M
+JANUARY 24 M W Francis de Sales, B & D
+JANUARY 25 F W Conversion of St. Paul, Ap
+JANUARY 26 M W Timothy and Titus, Bb
+JANUARY 27 O - Angela Merici, V
+JANUARY 28 M W Thomas Aquinas, P & D
+JANUARY 31 M W John Bosco, P
+FEBRUARY  2 L W Presentation of the Lord
+FEBRUARY  3 O - Blase, B & M; Ansgar, B
+FEBRUARY  5 M R Agatha, V & M
+FEBRUARY  6 M R Paul Miki and companions, Mm
+FEBRUARY  8 O - Jerome Emiliani
+FEBRUARY 10 M W Scholastica, V
+FEBRUARY 11 O - Our Lady of Lourdes
+FEBRUARY 14 M W Cyril, monk, and Methodius, B
+FEBRUARY 17 O - Seven Founders of the Order of Servites
+FEBRUARY 21 O - Peter Damian, B & D
+FEBRUARY 22 F W Chair of Peter, Ap
+FEBRUARY 23 M R Polycarp, B & M
+MARCH  3 O - Bl. Katharine Drexel, V
+MARCH  4 O - Casimir
+MARCH  7 M R Perpetua and Felicity, Mm 
+MARCH  8 O - John of God, Rel
+MARCH  9 O - Frances of Rome, Rel
+MARCH 17 O - Patrick, B
+MARCH 18 O - Cyril of Jerusalem, B & D
+MARCH 19 S W Joseph, Husband of Mary
+MARCH 23 O - Turibius de Mogrovejo, B
+MARCH 25 S W Annunciation
+APRIL  2 O - Francis of Paola, hermit
+APRIL  4 O - Isidore, B & D
+APRIL  5 O - Vincent Ferrer, P
+APRIL  7 M W John Baptist de la Salle, P
+APRIL 11 O - Stanislaus, B & M
+APRIL 13 O - Martin I, Po & M
+APRIL 15 O - Bl. Damien Joseph de Veuster, P
+APRIL 21 O - Anselm, B & D
+APRIL 23 O - George, M
+APRIL 24 O - Fidelis of Sigmaringen, P & M
+APRIL 25 F R Mark, Evangelist
+APRIL 28 O - Peter Chanel, P & M
+APRIL 29 M W Catherine of Siena, V & D
+APRIL 30 O - Pius V, Po
+MAY  1 O - Joseph the Worker
+MAY  2 M W Athanasius, B & D
+MAY  3 F R Philip & James, Ap
+MAY 12 O - Nereus and Achilleus, Mm; Pancras, M
+MAY 14 F R Matthias, Ap
+MAY 15 O - Isidore, Farmer
+MAY 18 O - John I, Po & M
+MAY 20 O - Bernardine of Siena, P
+MAY 25 O - Venerable Bede, P & D; Gregory VII, Po; Mary Magdalene de Pazzi, V
+MAY 26 M W Philip Neri, P
+MAY 27 O - Augustine of Canterbury, B
+MAY 31 F W Visitation
+JUNE  1 M R Justin, M
+JUNE  2 O - Marcellinus and Peter, Mm
+JUNE  3 M R Charles Lwanga and companions, Mm
+JUNE  5 M R Boniface, B & M
+JUNE  6 O - Norbert, B
+JUNE  9 O - Ephrem, De & D
+JUNE 11 M R Barnabas, Ap
+JUNE 13 M W Anthony of Padua, P & D
+JUNE 19 O - Romuald, Ab
+JUNE 21 M W Aloysius Gonzaga, Rel
+JUNE 22 O - Paulinus of Nola, B; John Fisher, B & M and Thomas More, M
+JUNE 24 S W Birth of John the Baptist
+JUNE 27 O - Cyril of Alexandria, B & D
+JUNE 28 M R Irenaeus, B & M
+JUNE 29 S R Peter and Paul, Ap
+JUNE 30 O - First Martyrs of the Church of Rome
+JULY  1 O - Bl. Junipero Serra, P & Rel
+JULY  3 F R Thomas, Ap
+JULY  4 O - Elizabeth of Portugal
+JULY  5 O - Anthony Zaccaria, P
+JULY  6 O - Maria Goretti, V & M
+JULY 11 M W Benedict, Ab
+JULY 13 O - Henry
+JULY 14 M W Bl. Kateri Tekakwitha, V
+JULY 15 M W Bonaventure, B & D
+JULY 16 O - Our Lady of Mount Carmel
+JULY 21 O - Lawrence of Brindisi, P & D
+JULY 22 M W Mary Magdalene
+JULY 23 O - Bridget, Rel
+JULY 25 F R James, Ap
+JULY 26 M W Joachim and Ann, Parents of Mary
+JULY 29 M W Martha
+JULY 30 O - Peter Chrysologus, B & D
+JULY 31 M W Ignatius of Loyola, P
+AUGUST  1 M W Alphonsus Liguori, B & D
+AUGUST  2 O - Eusebius of Vercelli, B
+AUGUST  4 M W John Vianney, P
+AUGUST  5 O - Dedication of St. Mary Major
+AUGUST  6 L W Transfiguration
+AUGUST  7 O - Sixtus II, Po & M and companions, Mm; Cajetan, P
+AUGUST  8 M W Dominic, P
+AUGUST 10 F R Lawrence, De & M
+AUGUST 11 M W Clare, V
+AUGUST 13 O - Pontian, Po & M and Hippolytus, P & M
+AUGUST 14 M R Maximilian Kolbe, P & M
+AUGUST 15 S W Assumption
+AUGUST 16 O - Stephen of Hungary
+AUGUST 18 O - Jane Frances de Chantal, Rel
+AUGUST 19 O - John Eudes, P
+AUGUST 20 M W Bernard, Ab & D
+AUGUST 21 M W Pius X, Po
+AUGUST 22 M W Queenship of Mary
+AUGUST 23 O - Rose of Lima, V
+AUGUST 24 F R Bartholomew, Ap
+AUGUST 25 O - Louis of France; Joseph Calasanz, P
+AUGUST 27 M W Monica
+AUGUST 28 M W Augustine, B & D
+AUGUST 29 M R Beheading of John the Baptist, M
+SEPTEMBER  3 M W Gregory the Great, Po & D
+SEPTEMBER  8 F W Birth of Mary
+SEPTEMBER  9 M W Peter Claver, P
+SEPTEMBER 13 M W John Chrysostom, B & D
+SEPTEMBER 14 L R Triumph of the Cross
+SEPTEMBER 15 M W Our Lady of Sorrows
+SEPTEMBER 16 M R Cornelius, Po & M and Cyprian, B & M
+SEPTEMBER 17 O - Robert Bellarmine, B & D
+SEPTEMBER 19 O - Janurius, B & M
+SEPTEMBER 20 M R Andrew Kim, P & M, Paul Chong, M, & companions, Mm
+SEPTEMBER 21 F R Matthew, Ap & Evangelist
+SEPTEMBER 26 O - Cosmas and Damian, Mm
+SEPTEMBER 27 M W Vincent de Paul, P
+SEPTEMBER 28 O - Wenceslaus, M; Lawrence Ruiz & companions, Mm
+SEPTEMBER 29 F W Michael, Gabriel, and Raphael, Archangels
+SEPTEMBER 30 M W Jerome, P & D
+OCTOBER  1 M W Theresa of the Child Jesus, V
+OCTOBER  2 M W Guardian Angels
+OCTOBER  4 M W Francis of Assisi, Rel
+OCTOBER  6 O - Bruno, P; Bl. Marie Rose Durocher, V
+OCTOBER  7 M W Our Lady of the Rosary
+OCTOBER  9 O - Denis, B & M and companions, Mm; John Leonardi, P
+OCTOBER 14 O - Callistus I, Po & M
+OCTOBER 15 M W Teresa of Avila, V & D
+OCTOBER 16 O - Hedwig, Rel; Margaret Mary Alacoque, V
+OCTOBER 17 M R Ignatius of Antioch, B & M
+OCTOBER 18 F R Luke, Evangelist
+OCTOBER 19 M R Isaac Jogues and John de Brebeuf, P & Mm and companions, Mm
+OCTOBER 20 O - Paul of the Cross, P
+OCTOBER 23 O - John of Capistrano, P
+OCTOBER 24 O - Anthony Claret, B
+OCTOBER 28 F R Simon and Jude, Ap
+NOVEMBER  1 S W All Saints
+NOVEMBER  2 L W All Souls
+NOVEMBER  3 O - Martin de Porres, Rel
+NOVEMBER  4 M W Charles Borromeo, B
+NOVEMBER  9 L W Dedication of St. John Lateran
+NOVEMBER 10 M W Leo the Great, Po & D
+NOVEMBER 11 M W Martin of Tours, B
+NOVEMBER 12 M R Josaphat, B & M
+NOVEMBER 13 M W Frances Xavier Cabrini, V
+NOVEMBER 15 O - Albert the Great, B & D
+NOVEMBER 16 O - Margaret of Scotland; Gertrude, V
+NOVEMBER 17 M W Elizabeth of Hungary, Rel
+NOVEMBER 18 O - Dedication of Churches of Peter & Paul; Rose Philippine Duchesne, V
+NOVEMBER 21 M W Presentation of Mary
+NOVEMBER 22 M R Cecilia, V & M
+NOVEMBER 23 O - Clement I, Po & M; Columban, Ab; Bl. Miguel Pro, P & M
+NOVEMBER 24 M R Andrew Dung-Lac, P & M and companions, Mm
+NOVEMBER 30 F R Andrew, Ap
+DECEMBER  3 M W Frances Xavier, P
+DECEMBER  4 O - John Damascene, P & D
+DECEMBER  6 O - Nicholas, B
+DECEMBER  7 M W Ambrose, B & D
+DECEMBER  8 S W Immaculate Conception
+DECEMBER  9 O - Bl. Juan Diego
+DECEMBER 11 O - Damasus I, Po
+DECEMBER 12 F W Our Lady of Guadalupe
+DECEMBER 13 M R Lucy, V & M
+DECEMBER 14 M W John of the Cross, P & D
+DECEMBER 21 O - Peter Canisius, P & D
+DECEMBER 23 O - John of Kanty, P
+DECEMBER 25 S W Christmas
+DECEMBER 26 F R Stephen, M
+DECEMBER 27 F W John, Ap and Evangelist
+DECEMBER 28 F R Holy Innocents, Mm
+DECEMBER 29 O - Thomas Becket, B & M
+DECEMBER 31 O - Sylvester I, Po

@@ -1,0 +1,18 @@
+<A NAME="__MONTH__"></A>
+<TABLE BORDER=5 CELLSPACING=2 CELLPADDING=2>
+
+<TR VALIGN="MIDDLE" ALIGN="CENTER">
+<TD COLSPAN=7>
+<H2>__MONTH__, __YEAR__</H2>
+</TD>
+</TR>
+
+<TR VALIGN="MIDDLE">
+   <TH>Sunday</TH>
+   <TH>Monday</TH>
+   <TH>Tuesday</TH>
+   <TH>Wednesday</TH>
+   <TH>Thursday</TH>
+   <TH>Friday</TH>
+   <TH>Saturday</TH>
+</TR>
