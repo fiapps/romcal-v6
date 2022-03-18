@@ -34,10 +34,6 @@
 /* montail.c       */   extern void montail();
 /* splitstr.c      */   extern char *splitstr();
 /* psformat.c      */   extern void do_small_months();
-/* psformat.c      */   extern void do_fills();
-/* psformat.c      */   extern int end_page();
-/* psformat.c      */   extern void do_page1();
-/* psformat.c      */   extern void do_page2();
 /* monhead.c       */   extern void monhead();
 /* init.c          */   extern void init();
 /* lent.c          */   extern int lent();
@@ -67,7 +63,7 @@
 /* printtxt.c      */   extern void printtxt();
 /* printweb.c      */   extern void printweb1();
 /* printweb.c      */   extern void printweb();
-/* leapyear.c      */   extern logical_t leapyear();
+/* leapyear.c      */   extern logical_t leapyear(int);
 #else
 /* rtfrow.c        */   extern void rtfrow(logical_t);
 /* montail.c       */   extern void montail(struct Info *);
