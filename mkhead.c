@@ -43,7 +43,7 @@ int main(int   argc,
    printf("static char *__MKHEAD__[] = {\n");
    while (gets(line)) {
       printf("\"");
-      for (p = &line[0]; *p != NULL; p++) {
+      for (p = &line[0]; *p != '\0'; p++) {
 	 switch (*p) {
 	    case '%':
 	       putchar('%');
